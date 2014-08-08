@@ -59,9 +59,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreateDatabase.cs" />
+    <Compile Include="Models\Drive.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\LookupTables.cs" />
+    <Compile Include="Models\Play.cs" />
     <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\PlayerPlay.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
