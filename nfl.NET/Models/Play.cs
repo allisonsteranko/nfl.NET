@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace nfl.NET.Models
 {
-    class Play
+    public class Play
     {
+
     }
 }

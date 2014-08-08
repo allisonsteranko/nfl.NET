@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SQLite.Net.Attributes;
 using SQLiteNetExtensions.Attributes;
 
 namespace nfl.NET.Models
 {
     public class Game
     {
+        [PrimaryKey]
         public string gsis_id { get; set; }
         public string GameKey { get; set; }
         public DateTime StartTime { get; set; }

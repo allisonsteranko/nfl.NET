@@ -41,4 +41,12 @@ namespace nfl.NET.Models
             public string Name { get; set; }
             public string Abbreviation { get; set; }
         }
+
+        public class FieldPosition
+        {
+            public int FieldPositionID { get; set; }
+            public int Position { get; set; }
+            public string Text { get; set; }
+        }
+
 }

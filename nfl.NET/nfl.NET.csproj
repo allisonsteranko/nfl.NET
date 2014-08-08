@@ -61,6 +61,7 @@
     <Compile Include="CreateDatabase.cs" />
     <Compile Include="Models\Drive.cs" />
     <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\GameTime.cs" />
     <Compile Include="Models\LookupTables.cs" />
     <Compile Include="Models\Play.cs" />
     <Compile Include="Models\Player.cs" />
