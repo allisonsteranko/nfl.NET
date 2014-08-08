@@ -1,0 +1,13 @@
+C:\nfl.NET\nfl.NET\bin\Debug\x64\SQLite.Interop.dll
+C:\nfl.NET\nfl.NET\bin\Debug\x86\SQLite.Interop.dll
+C:\nfl.NET\nfl.NET\bin\Debug\nfl.NET.dll.config
+C:\nfl.NET\nfl.NET\bin\Debug\nfl.NET.dll
+C:\nfl.NET\nfl.NET\bin\Debug\nfl.NET.pdb
+C:\nfl.NET\nfl.NET\bin\Debug\Newtonsoft.Json.dll
+C:\nfl.NET\nfl.NET\bin\Debug\System.Data.SQLite.dll
+C:\nfl.NET\nfl.NET\bin\Debug\System.Data.SQLite.Linq.dll
+C:\nfl.NET\nfl.NET\bin\Debug\Newtonsoft.Json.xml
+C:\nfl.NET\nfl.NET\bin\Debug\System.Data.SQLite.xml
+C:\nfl.NET\nfl.NET\obj\Debug\nfl.NET.csprojResolveAssemblyReference.cache
+C:\nfl.NET\nfl.NET\obj\Debug\nfl.NET.dll
+C:\nfl.NET\nfl.NET\obj\Debug\nfl.NET.pdb
