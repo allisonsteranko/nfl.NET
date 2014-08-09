@@ -15,8 +15,15 @@ namespace nfl.NET
     {
         private SQLitePlatformWin32 _platform = new SQLitePlatformWin32();
         private string _defaultFilePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "nfldb.db";
-
-        public void CreateDatabase()
+        
+        public void SetFilePath (string filepath)
+        {
+            if (!string.IsNullOrWhiteSpace(filepath))
+            {
+                _defaultFilePath = filepath;
+            }
+        }
+        public void SetupDatabase()
         {
             if (!File.Exists(_defaultFilePath))
             {
