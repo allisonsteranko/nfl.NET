@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nfl.NET", "nfl.NET\nfl.NET.csproj", "{9378111F-6854-4581-9696-2EF27651164B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{34E704D5-CBF1-452E-80A5-FD38FBCC0336}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9378111F-6854-4581-9696-2EF27651164B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9378111F-6854-4581-9696-2EF27651164B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9378111F-6854-4581-9696-2EF27651164B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34E704D5-CBF1-452E-80A5-FD38FBCC0336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34E704D5-CBF1-452E-80A5-FD38FBCC0336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34E704D5-CBF1-452E-80A5-FD38FBCC0336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34E704D5-CBF1-452E-80A5-FD38FBCC0336}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

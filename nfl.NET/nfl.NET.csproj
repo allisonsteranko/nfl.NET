@@ -59,14 +59,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreateDatabase.cs" />
+    <Compile Include="Helpers\TimeHelpers.cs" />
     <Compile Include="Models\Drive.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\GameTime.cs" />
     <Compile Include="Models\LookupTables.cs" />
+    <Compile Include="Models\PivotTables.cs" />
     <Compile Include="Models\Play.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\PlayerPlay.cs" />
+    <Compile Include="Models\Stat.cs" />
     <Compile Include="Models\Team.cs" />
+    <Compile Include="NFLDataAccess\GameParser.cs" />
+    <Compile Include="NFLDataAccess\PlayerParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

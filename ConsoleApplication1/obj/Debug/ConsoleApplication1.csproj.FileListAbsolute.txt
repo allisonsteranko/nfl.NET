@@ -1,0 +1,15 @@
+F:\Media\Documents\TestProjects\nfl.NET\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+F:\Media\Documents\TestProjects\nfl.NET\ConsoleApplication1\bin\Debug\x64\SQLite.Interop.dll
+F:\Media\Documents\TestProjects\nfl.NET\ConsoleApplication1\bin\Debug\x86\SQLite.Interop.dll
+F:\Media\Documents\TestProjects\nfl.NET\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+F:\Media\Documents\TestProjects\nfl.NET\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+F:\Media\Documents\TestProjects\nfl.NET\ConsoleApplication1\bin\Debug\nfl.NET.dll
+F:\Media\Documents\TestProjects\nfl.NET\ConsoleApplication1\bin\Debug\SQLite.Net.Platform.Win32.dll
+F:\Media\Documents\TestProjects\nfl.NET\ConsoleApplication1\bin\Debug\SQLite.Net.dll
+F:\Media\Documents\TestProjects\nfl.NET\ConsoleApplication1\bin\Debug\SQLiteNetExtensions.dll
+F:\Media\Documents\TestProjects\nfl.NET\ConsoleApplication1\bin\Debug\Newtonsoft.Json.dll
+F:\Media\Documents\TestProjects\nfl.NET\ConsoleApplication1\bin\Debug\nfl.NET.pdb
+F:\Media\Documents\TestProjects\nfl.NET\ConsoleApplication1\bin\Debug\Newtonsoft.Json.xml
+F:\Media\Documents\TestProjects\nfl.NET\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+F:\Media\Documents\TestProjects\nfl.NET\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+F:\Media\Documents\TestProjects\nfl.NET\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

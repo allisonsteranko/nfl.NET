@@ -11,7 +11,7 @@ namespace nfl.NET.Models
     public class GameTime
     {
         [PrimaryKey]
-        public int Seconds { get; set; }
+        public int SecondsElapsed { get; set; }
         [ForeignKey(typeof(GamePhase))]
         public int GamePhaseID { get; set; }
         public string FriendlyTime { get; set; }
