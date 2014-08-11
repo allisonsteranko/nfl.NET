@@ -50,35 +50,37 @@ namespace nfl.NET.NFLDataAccess
 
         public Game ParseGeneralGameData(string GameFeed, string GameKey)
         {
-            var game = JObject.Parse(GameFeed);
+            var game = (JObject)JObject.Parse(GameFeed).SelectToken(GameKey);
             
-            var homestats = (JObject)game.SelectToken(GameKey).SelectToken("home");
-            var awaystats = (JObject)game.SelectToken(GameKey).SelectToken("away");
+            var homestats = (JObject)game.SelectToken("home");
+            var awaystats = (JObject)game.SelectToken("away");
             
             var homescores = (JObject)homestats.SelectToken("score");
             var awayscores = (JObject)awaystats.SelectToken("score");
 
 
-            var _thisGame = new Game();
-                _thisGame.AwayTeamID = awaystats.SelectToken("abbr").Value<string>();
-                _thisGame.HomeTeamID = homestats.SelectToken("abbr").Value<string>();
-                _thisGame.GameKey = GameKey;
-                _thisGame.gsis_id = GameKey;
-                _thisGame.Finished = (game.SelectToken(GameKey).SelectToken("qtr").Value<string>() == "Final");
-                _thisGame.HomeScore_Q1 = homescores.SelectToken("1").Value<int>();
-                _thisGame.HomeScore_Q2 = homescores.SelectToken("2").Value<int>();
-                _thisGame.HomeScore_Q3 = homescores.SelectToken("3").Value<int>();
-                _thisGame.HomeScore_Q4 = homescores.SelectToken("4").Value<int>();
-                _thisGame.HomeScore_Q5 = homescores.SelectToken("5").Value<int>();
-                _thisGame.HomeScore = homescores.SelectToken("T").Value<int>();
-                _thisGame.AwayScore_Q1 = awayscores.SelectToken("1").Value<int>();
-                _thisGame.AwayScore_Q2 = awayscores.SelectToken("2").Value<int>();
-                _thisGame.AwayScore_Q3 = awayscores.SelectToken("3").Value<int>();
-                _thisGame.AwayScore_Q4 = awayscores.SelectToken("4").Value<int>();
-                _thisGame.AwayScore_Q5 = awayscores.SelectToken("5").Value<int>();
-                _thisGame.AwayScore = awayscores.SelectToken("T").Value<int>();
-                _thisGame.HomeTurnovers = homestats.SelectToken("to").Value<int>();
-                _thisGame.AwayTurnovers = awaystats.SelectToken("to").Value<int>();
+            var _thisGame = new Game()
+            {
+                AwayTeamID = awaystats.SelectToken("abbr").Value<string>(),
+                HomeTeamID = homestats.SelectToken("abbr").Value<string>(),
+                GameKey = GameKey,
+                gsis_id = GameKey,
+                Finished = (game.SelectToken("qtr").Value<string>() == "Final"),
+                HomeScore_Q1 = homescores.SelectToken("1").Value<int>(),
+                HomeScore_Q2 = homescores.SelectToken("2").Value<int>(),
+                HomeScore_Q3 = homescores.SelectToken("3").Value<int>(),
+                HomeScore_Q4 = homescores.SelectToken("4").Value<int>(),
+                HomeScore_Q5 = homescores.SelectToken("5").Value<int>(),
+                HomeScore = homescores.SelectToken("T").Value<int>(),
+                AwayScore_Q1 = awayscores.SelectToken("1").Value<int>(),
+                AwayScore_Q2 = awayscores.SelectToken("2").Value<int>(),
+                AwayScore_Q3 = awayscores.SelectToken("3").Value<int>(),
+                AwayScore_Q4 = awayscores.SelectToken("4").Value<int>(),
+                AwayScore_Q5 = awayscores.SelectToken("5").Value<int>(),
+                AwayScore = awayscores.SelectToken("T").Value<int>(),
+                HomeTurnovers = homestats.SelectToken("to").Value<int>(),
+                AwayTurnovers = awaystats.SelectToken("to").Value<int>()
+            };
             return _thisGame;
         }
 
@@ -96,7 +98,7 @@ namespace nfl.NET.NFLDataAccess
             return DriveList;
         }
 
-        //public List<Play> ParsePlays(string GameFeed)
+        //public List<Play> ParsePlays(string GameFeed, string GameKey)
         //{
 
         //}

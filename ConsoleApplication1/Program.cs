@@ -21,8 +21,8 @@ namespace ConsoleApplication1
             var GameDrives = _ctxGames.ParseDrives(GameFeed, gameID);
             Console.WriteLine("Home Score: " + GameData.HomeScore);
             Console.WriteLine("Away Score: " + GameData.AwayScore);
-            Console.WriteLine("Time of posession test - 643 seconds = " + time.ConvertToMinSec(643));
-            Console.WriteLine("Time of possesson reverse test - 10:43 = " + time.ConvertToSeconds("10:43").ToString() + " seconds");
+            Console.WriteLine("Time of posession test - 3554 seconds = " + time.ConvertToMinSec(3554));
+            Console.WriteLine("Time of possesson reverse test - 59:54 = " + time.ConvertToSeconds("59:54").ToString() + " seconds");
         }
     }
 }

@@ -10,10 +10,8 @@ namespace nfl.NET.Helpers
     {
         public string ConvertToMinSec(int seconds)
         {
-            var resultSeconds = (seconds % 60).ToString("00");
-            var resultMinutes = (seconds / 60).ToString("00");
-
-            return resultMinutes + ":" + resultSeconds;
+            var timespan = TimeSpan.FromSeconds(seconds);
+            return timespan.ToString(@"mm\:ss");
         }
 
         public int ConvertToSeconds(string MMss)

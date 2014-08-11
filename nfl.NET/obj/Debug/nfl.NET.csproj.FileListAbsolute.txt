@@ -27,3 +27,6 @@ F:\Media\Documents\TestProjects\nfl.NET\nfl.NET\bin\Debug\System.Data.SQLite.dll
 F:\Media\Documents\TestProjects\nfl.NET\nfl.NET\bin\Debug\System.Data.SQLite.Linq.dll
 F:\Media\Documents\TestProjects\nfl.NET\nfl.NET\bin\Debug\Newtonsoft.Json.xml
 F:\Media\Documents\TestProjects\nfl.NET\nfl.NET\bin\Debug\System.Data.SQLite.xml
+C:\nfl.NET\nfl.NET\bin\Debug\SQLite.Net.dll
+C:\nfl.NET\nfl.NET\bin\Debug\SQLite.Net.Platform.Win32.dll
+C:\nfl.NET\nfl.NET\bin\Debug\SQLiteNetExtensions.dll

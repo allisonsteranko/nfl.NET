@@ -45,5 +45,10 @@ namespace nfl.NET
                 }
             }
         }
+
+        public void SeedDatabase()
+        {
+
+        }
     }
 }
