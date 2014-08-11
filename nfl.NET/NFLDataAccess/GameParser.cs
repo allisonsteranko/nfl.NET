@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using nfl.NET.Models;
+using nfl.NET.Helpers;
 using System.Net;
 using System.IO;
 
@@ -16,6 +17,7 @@ namespace nfl.NET.NFLDataAccess
         #region PROPERTIES
         private static string _baseURL = "http://www.nfl.com/liveupdate/game-center/";
         private static string _URLsuffix = "_gtd.json";
+        private static TimeHelpers _time = new TimeHelpers();
         #endregion
         
         public string GetGameFeed(string gameID)
@@ -92,7 +94,12 @@ namespace nfl.NET.NFLDataAccess
 
             foreach (var drive in jsonDrives)
             {
-                //dosomethinghere
+                var driveObject = drive.Value;
+                var _drive = JsonConvert.DeserializeObject<Drive>(driveObject.ToString());
+                _drive.DriveId = int.Parse(drive.Key);
+                _drive.TimeOfPossessionSeconds = _time.ConvertToSeconds(_drive.TimeOfPossession);
+                _drive.gsis_id = GameKey;
+                DriveList.Add(_drive);
             }
 
             return DriveList;
