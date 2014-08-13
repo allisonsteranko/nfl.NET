@@ -52,25 +52,8 @@ namespace nfl.NET
 
         public void SeedDatabase(SQLiteConnection conn)
         {
-            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
-            string PlayerSeed;
-            string TeamSeed;
-            string StatMapSeed;
-            string CategorySeed;
-            string CountingStatsSeed;
-            string FieldPositionSeed;
-            string GameTimeSeed;
-            string PlayerPositionSeed;
-            string SeasonPhaseSeed;
-            string GamePhaseSeed;
-            string GameDaySeed;
-            string PlayerStatusSeed;
-            
-            using (Stream playerstream = assembly.GetManifestResourceStream(assembly.GetName().Name + ".Resources.players.txt"))
-            using (StreamReader sr = new StreamReader(playerstream))
-            {
-                PlayerSeed = sr.ReadToEnd();
-            }
+
+            string PlayerSeed = GetSeedString("players.txt");
             var PlayerList = JObject.Parse(PlayerSeed);
             foreach (var jsonplayerobject in PlayerList)
             {
@@ -84,10 +67,37 @@ namespace nfl.NET
                 {
 
                 }
-
-
             }
+            PlayerSeed = null;
+
+
+            string TeamSeed = GetSeedString("teams.txt");
+            string StatMapSeed;
+            string CategorySeed;
+            string CountingStatsSeed;
+            string FieldPositionSeed;
+            string GameTimeSeed;
+            string PlayerPositionSeed;
+            string SeasonPhaseSeed;
+            string GamePhaseSeed;
+            string GameDaySeed;
+            string PlayerStatusSeed;
+          
+          
 
         }
+
+        public string GetSeedString(string filename)
+        {
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            var streambase = assembly.GetName().Name + ".Resources.";
+
+            using (Stream playerstream = assembly.GetManifestResourceStream(streambase + "players.txt"))
+            using (StreamReader sr = new StreamReader(playerstream))
+            {
+                return sr.ReadToEnd();
+            }
+        }
+
     }
 }
