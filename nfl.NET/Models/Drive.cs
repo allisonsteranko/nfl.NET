@@ -28,12 +28,16 @@ namespace nfl.NET.Models
         public string PossestionTeamId {get;set;}
         
         [JsonIgnore]
+        [OneToOne]
         public GameTime StartTime { get; set; }
         [JsonIgnore]
+        [OneToOne]
         public GameTime EndTime { get; set; }
         [JsonIgnore]
+        [OneToOne]
         public FieldPosition StartFieldPos { get; set; }
         [JsonIgnore]
+        [OneToOne]
         public FieldPosition EndFieldPos { get; set; }
         
         [JsonIgnore]

@@ -95,11 +95,23 @@ namespace nfl.NET.NFLDataAccess
             foreach (var drive in jsonDrives)
             {
                 var driveObject = drive.Value;
-                var _drive = JsonConvert.DeserializeObject<Drive>(driveObject.ToString());
-                _drive.DriveId = int.Parse(drive.Key);
-                _drive.TimeOfPossessionSeconds = _time.ConvertToSeconds(_drive.TimeOfPossession);
-                _drive.gsis_id = GameKey;
-                DriveList.Add(_drive);
+                try
+                {
+                    var _drive = JsonConvert.DeserializeObject<Drive>(driveObject.ToString());
+                    _drive.DriveId = int.Parse(drive.Key);
+                    _drive.TimeOfPossessionSeconds = _time.ConvertToSeconds(_drive.TimeOfPossession);
+                    _drive.gsis_id = GameKey;
+                    DriveList.Add(_drive);
+                    if (_drive.Result == "End of Game")
+                    {
+                        break;
+                    }
+                }
+                catch (JsonSerializationException ex)
+                {
+                    
+                }
+                
             }
 
             return DriveList;
