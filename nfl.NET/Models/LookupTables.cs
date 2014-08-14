@@ -36,13 +36,6 @@ namespace nfl.NET.Models
         public string Abbreviation { get; set; }
     }
 
-    public class PlayerPosition
-    {
-        public int PositionID { get; set; }
-        public string Name { get; set; }
-        public string Abbreviation { get; set; }
-    }
-
     public class FieldPosition
     {
         public int FieldPositionID { get; set; }

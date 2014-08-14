@@ -70987,7 +70987,7 @@
         "years_pro": 1
     }, 
     "00-0029834": {
-        "birthdate": "//", 
+        "birthdate": "", 
         "college": "Youngstown State", 
         "first_name": "Jamaine", 
         "full_name": "Jamaine Cook", 
@@ -77861,7 +77861,7 @@
         "weight": 185
     }, 
     "00-0030362": {
-        "birthdate": "//", 
+        "birthdate": "", 
         "college": "Hinds CC MS", 
         "first_name": "Risean", 
         "full_name": "Risean Broussard", 
@@ -81361,7 +81361,7 @@
         "weight": 180
     }, 
     "00-0030588": {
-        "birthdate": "//", 
+        "birthdate": "", 
         "college": "Texas Christian", 
         "first_name": "Jeff", 
         "full_name": "Jeff Olson", 

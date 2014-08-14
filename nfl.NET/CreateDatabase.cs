@@ -35,7 +35,6 @@ namespace nfl.NET
                     conn.CreateTable<GamePhase>();
                     conn.CreateTable<GameTime>();
                     conn.CreateTable<FieldPosition>();
-                    conn.CreateTable<PlayerPosition>();
                     conn.CreateTable<GameDay>();
                     conn.CreateTable<PlayerStatus>();
                     conn.CreateTable<Team>();
@@ -52,6 +51,16 @@ namespace nfl.NET
 
         public void SeedDatabase(SQLiteConnection conn)
         {
+            string TeamSeed = GetSeedString("teams.txt");
+            var teamlist = JArray.Parse(TeamSeed);
+            {
+                foreach (JObject team in teamlist)
+                {
+                    var _team = JsonConvert.DeserializeObject<Team>(team.ToString());
+                    conn.Insert(_team);
+                }
+            }
+            TeamSeed = null;
 
             string PlayerSeed = GetSeedString("players.txt");
             var PlayerList = JObject.Parse(PlayerSeed);
@@ -61,7 +70,12 @@ namespace nfl.NET
                 try
                 {
                     var player = JsonConvert.DeserializeObject<Player>(jsonplayer.ToString());
-                    conn.Insert(player, typeof(Player));
+                    player.PlayerId = jsonplayerobject.Key;
+                    if (!string.IsNullOrWhiteSpace(player.BirthdateString))
+                    {
+                        player.Birthdate = DateTime.Parse(player.BirthdateString);
+                    }
+                    conn.Insert(player);
                 }
                 catch (JsonSerializationException ex)
                 {
@@ -71,19 +85,19 @@ namespace nfl.NET
             PlayerSeed = null;
 
 
-            string TeamSeed = GetSeedString("teams.txt");
+
+
             string StatMapSeed;
             string CategorySeed;
             string CountingStatsSeed;
             string FieldPositionSeed;
             string GameTimeSeed;
-            string PlayerPositionSeed;
             string SeasonPhaseSeed;
             string GamePhaseSeed;
             string GameDaySeed;
             string PlayerStatusSeed;
-          
-          
+
+
 
         }
 
@@ -92,7 +106,7 @@ namespace nfl.NET
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
             var streambase = assembly.GetName().Name + ".Resources.";
 
-            using (Stream playerstream = assembly.GetManifestResourceStream(streambase + "players.txt"))
+            using (Stream playerstream = assembly.GetManifestResourceStream(streambase + filename))
             using (StreamReader sr = new StreamReader(playerstream))
             {
                 return sr.ReadToEnd();

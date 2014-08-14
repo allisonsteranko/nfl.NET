@@ -28,3 +28,5 @@ C:\nfl.NET\ConsoleApplication1\bin\Debug\Newtonsoft.Json.xml
 C:\nfl.NET\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
 C:\nfl.NET\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\nfl.NET\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\nfl.NET\ConsoleApplication1\bin\Debug\System.Data.SQLite.dll
+C:\nfl.NET\ConsoleApplication1\bin\Debug\System.Data.SQLite.xml

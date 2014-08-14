@@ -26,27 +26,17 @@ namespace nfl.NET.NFLDataAccess
             StringBuilder urlbuilder = new StringBuilder(_baseURL);
             urlbuilder.Append(gameID + "/");
             urlbuilder.Append(gameID + _URLsuffix);
-            try
-            {
-                var request = WebRequest.Create(urlbuilder.ToString());
-                request.Timeout = 3000;
-                using (var response = request.GetResponse())
-                {
-                    using (var responseStream = response.GetResponseStream())
-                    {
-                        var readStream = new StreamReader(responseStream);
-                        //stringify data
-                        JsonString = readStream.ReadToEnd();
-                        responseStream.Close();
-                        response.Close();
-                        return JsonString;
-                    }
-                }
-            }
-            catch (WebException ex)
-            {
-                JsonString = ex.Message;
-                return JsonString;
+            var request = WebRequest.Create(urlbuilder.ToString());
+            request.Timeout = 3000;
+            using (var response = request.GetResponse())
+            using (var responseStream = response.GetResponseStream())
+            {                  
+                    var readStream = new StreamReader(responseStream);
+                    //stringify data
+                    JsonString = readStream.ReadToEnd();
+                    responseStream.Close();
+                    response.Close();
+                    return JsonString;
             }
         }
 
